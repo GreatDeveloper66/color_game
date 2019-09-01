@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+$backcol: rgba(0, 0, 255, 0.1);
+$family: "Roboto", sans-serif;
+$wht: rgba(255,255,255,1);
+$stlblue: rgba(10, 130, 180,1);
+$blackpearl: rgba(14,27,38,1);
+$midgrey: rgba(101,109,116,1);
+$viol: rgba(238,130,238,1);
+
+body {
+	background-color: $backcol;
+	margin: 0;
+	font-family: $family;
+	.subheading {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: antiquewhite;
+		h2 {
+			font-size: 30px;
+			color: blueviolet;
+			margin: 0;
+			
+	 }
+	}
+	
+	#stripe {
+		background-color: $wht;
+		display: flex;
+		justify-content: center;
+		button {
+			 border: solid $blackpearl 1px;
+    box-shadow: 0 0 1px 1px $midgrey;
+    background: rgba(0, 255, 0, 0.8);
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: $stlblue;
+    letter-spacing: 1px;
+    font-size: 12px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+			:hover {
+				color: $wht;
+    background-color: $stlblue;
+			}
+		}
+		.selected {
+			color: $wht;
+   background-color: $stlblue;
+		}
+		span {
+			#message {
+				display: inline-block;
+				width: 20%;
+			}
+		}
+	}
+	h1 {
+		text-align: center;
+    line-height: 1.1;
+    font-weight: normal;
+    color: $wht;
+    background: $stlblue;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 20px 0;
+		span {
+			#mainHeading {
+				 font-size: 35px;
+			}
+			#colorDisplay {
+				font-size: 18px;
+			}
+		}
+	}
+	#container {
+		margin: 20px auto;
+  max-width: 600px;
+		.square {
+			 width: 30%;
+      background: $viol;
+      padding-bottom: 30%;
+      float: left;
+      margin: 1.66%;
+      transition: background 0.6s;
+      -webkit-transition: background 0.6s;
+      -moz-transition: background 0.6s;
+      cursor: pointer;
+			:hover {
+				 border-radius: 15%;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width:768px){
+	body {
+		h1{
+			span {
+				#mainHeading {
+					 font-size: 35px
+				}
+				#colorDisplay {
+					font-size: 25px;
+				}
+			}
+		}
+		#stripe {
+			button {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width:992px){
+	body {
+		h1 {
+			span {
+				#mainHeading {
+					font-size: 45px;
+				}
+				#colorDisplay {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+}

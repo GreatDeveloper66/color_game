@@ -1,0 +1,21 @@
+{
+  "name": "color_game",
+  "version": "1.0.0",
+  "description": "This a color game app written in JQuery,HTML,CSS with SCSS and HAMLpreprocessors. Guess the color form its RGB, RGBA or HEX code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "color",
+    "jquery",
+    "game"
+  ],
+  "author": "Adam Shaffer",
+  "license": "MIT",
+  "devDependencies": {
+    "jquery": "^3.4.1",
+    "sass": "^1.22.10"
+  },
+  "dependencies": {}
+}
