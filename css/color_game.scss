@@ -48,7 +48,7 @@ body {
 	}
 	.gamelevel {
 		@extend .columnalignment;
-		@include divsize(445px,auto,auto,2);
+		@include divsize(515px,auto,auto,2);
 		border: 2px solid $blueviolet;
 		box-shadow: 2px 2px $midgrey;
 		background-color: $lightgrey;
