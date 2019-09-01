@@ -1,36 +1,51 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-/* line 10, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+/* line 13, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
 .divalignment, body .subheading, body #stripe {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-/* line 16, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+/* line 19, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+.columnalignment, body .gamelevel, body .modebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+/* line 33, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
 body {
-  background-color: rgba(0, 0, 255, 0.1);
+  width: auto;
+  height: auto;
   margin: 0;
-  font-family: "Roboto", sans-serif; }
-  /* line 20, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
-  body .subheading {
-    /*
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		*/
-    background-color: antiquewhite; }
-    /* line 28, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
-    body .subheading h2 {
-      font-size: 30px;
-      color: blueviolet;
-      margin: 0; }
-  /* line 36, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+  padding: 0;
+  background-color: rgba(0, 0, 255, 0.1);
+  font-family: "Roboto"; }
+  /* line 41, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+  body .subheading h2 {
+    width: auto;
+    height: auto;
+    margin: 2px;
+    padding: 2px;
+    font-size: 30px;
+    color: blueviolet;
+    background: transparent; }
+  /* line 49, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+  body .gamelevel {
+    width: 445px;
+    height: auto;
+    margin: auto;
+    padding: 2;
+    border: 2px solid blueviolet;
+    box-shadow: 2px 2px #656d74;
+    background-color: #c3c3c3; }
+  /* line 56, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+  body .modebox {
+    border: 2px solid blueviolet;
+    background-color: #c3c3c3; }
+  /* line 61, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
   body #stripe {
-    /*
-		display: flex;
-		justify-content: center;
-		*/
     background-color: white; }
-    /* line 43, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+    /* line 65, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
     body #stripe button {
       border: solid #0e1b26 1px;
       box-shadow: 0 0 1px 1px #656d74;
@@ -45,71 +60,71 @@ body {
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       outline: none;
-      cursor: pointer;
-      font-size: 14px; }
-      /* line 59, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
-      body #stripe button :hover {
-        color: white;
-        background-color: #0a82b4; }
-    /* line 64, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+      font-size: 14px;
+      cursor: pointer; }
+    /* line 83, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
     body #stripe .selected {
       color: white;
       background-color: #0a82b4; }
-    /* line 69, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+    /* line 89, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
     body #stripe span #message {
       display: inline-block;
       width: 20%; }
-  /* line 75, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+  /* line 96, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
   body h1 {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: "20px 0";
     text-align: center;
     line-height: 1.1;
     font-weight: normal;
     color: white;
     background: #0a82b4;
-    margin: 0;
-    text-transform: uppercase;
-    padding: 20px 0; }
-    /* line 85, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+    text-transform: uppercase; }
+    /* line 106, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
     body h1 span #mainHeading {
       font-size: 35px; }
-    /* line 88, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+    /* line 110, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
     body h1 span #colorDisplay {
       font-size: 18px; }
-  /* line 93, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+  /* line 116, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
   body #container {
     margin: 20px auto;
     max-width: 600px; }
-    /* line 96, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+    /* line 120, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
     body #container .square {
       width: 30%;
+      height: auto;
+      margin: 1.66%;
+      padding: 0;
       background: violet;
       padding-bottom: 30%;
       float: left;
-      margin: 1.66%;
       transition: background 0.6s;
       -webkit-transition: background 0.6s;
       -moz-transition: background 0.6s;
       cursor: pointer; }
-      /* line 106, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+      /* line 130, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
       body #container .square :hover {
         border-radius: 15%; }
 
 @media only screen and (min-width: 768px) {
-  /* line 117, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+  /* line 141, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
   body h1 span #mainHeading {
     font-size: 35px; }
-  /* line 120, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+  /* line 145, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
   body h1 span #colorDisplay {
     font-size: 25px; }
-  /* line 126, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+  /* line 152, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
   body #stripe button {
     font-size: 18px; } }
 
 @media only screen and (min-width: 992px) {
-  /* line 137, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+  /* line 163, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
   body h1 span #mainHeading {
     font-size: 45px; }
-  /* line 140, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
+  /* line 167, /Users/adam/Desktop/My_Documents/Coding/Projects/color_game/css/color_game.scss */
   body h1 span #colorDisplay {
     font-size: 30px; } }
 

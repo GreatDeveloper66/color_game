@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 $backcol: rgba(0, 0, 255, 0.1);
-$family: "Roboto", sans-serif;
-$wht: rgba(255,255,255,1);
-$stlblue: rgba(10, 130, 180,1);
-$blackpearl: rgba(14,27,38,1);
-$midgrey: rgba(101,109,116,1);
-$viol: rgba(238,130,238,1);
+$family: "Roboto";
+$wht: rgba(255, 255, 255, 1);
+$stlblue: rgba(10, 130, 180, 1);
+$blackpearl: rgba(14, 27, 38, 1);
+$midgrey: rgba(101, 109, 116, 1);
+$viol: rgba(238, 130, 238, 1);
+$blueviolet: rgba(138, 43, 226, 1);
+$antiquewhite: rgba(250, 235, 215, 1);
+$lightgrey: rgba(195,195,195,1);
 
 .divalignment {
 	display: flex;
@@ -13,58 +16,75 @@ $viol: rgba(238,130,238,1);
 	align-items: center;
 }
 
+.columnalignment {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin divsize($width:auto, $height:auto, $margin:auto, $padding:0) {
+	width: $width;
+	height: $height;
+	margin: $margin;
+	padding: $padding;
+}
+
 body {
+	@include divsize(auto, auto, 0, 0);
 	background-color: $backcol;
-	margin: 0;
 	font-family: $family;
+
 	.subheading {
-		/*
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		*/
 		@extend .divalignment;
-		background-color: antiquewhite;
+
 		h2 {
+			@include divsize(auto,auto,2px,2px)
 			font-size: 30px;
-			color: blueviolet;
-			margin: 0;
+			color: $blueviolet;
+			background: transparent;
 			
-	 }
+		}
 	}
-	
+	.gamelevel {
+		@extend .columnalignment;
+		@include divsize(445px,auto,auto,2);
+		border: 2px solid $blueviolet;
+		box-shadow: 2px 2px $midgrey;
+		background-color: $lightgrey;
+	}
+	.modebox {
+		@extend .columnalignment;
+		border: 2px solid $blueviolet;
+		background-color: $lightgrey;
+	}
 	#stripe {
 		@extend .divalignment;
-		/*
-		display: flex;
-		justify-content: center;
-		*/
 		background-color: $wht;
+
 		button {
-			 border: solid $blackpearl 1px;
-    box-shadow: 0 0 1px 1px $midgrey;
-    background: rgba(0, 255, 0, 0.8);
-    text-transform: uppercase;
-    height: 100%;
-    font-weight: 700;
-    color: $stlblue;
-    letter-spacing: 1px;
-    font-size: 12px;
-    transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    outline: none;
-    cursor: pointer;
-    font-size: 14px;
-			:hover {
-				color: $wht;
-    background-color: $stlblue;
-			}
+			border: solid $blackpearl 1px;
+			box-shadow: 0 0 1px 1px $midgrey;
+			background: rgba(0, 255, 0, 0.8);
+			text-transform: uppercase;
+			height: 100%;
+			font-weight: 700;
+			color: $stlblue;
+			letter-spacing: 1px;
+			font-size: 12px;
+			transition: all 0.3s;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			outline: none;
+			font-size: 14px;
+			cursor: pointer;
 		}
+
 		.selected {
 			color: $wht;
-   background-color: $stlblue;
+			background-color: $stlblue;
 		}
+
 		span {
 			#message {
 				display: inline-block;
@@ -72,56 +92,62 @@ body {
 			}
 		}
 	}
+
 	h1 {
+		@include divsize(auto,auto,0,"20px 0");
 		text-align: center;
-  line-height: 1.1;
-  font-weight: normal;
-  color: $wht;
-  background: $stlblue;
-  margin: 0;
-  text-transform: uppercase;
-  padding: 20px 0;
+		line-height: 1.1;
+		font-weight: normal;
+		color: $wht;
+		background: $stlblue;
+		text-transform: uppercase;
+
 		span {
 			#mainHeading {
-				 font-size: 35px;
+				font-size: 35px;
 			}
+
 			#colorDisplay {
 				font-size: 18px;
 			}
 		}
 	}
+
 	#container {
 		margin: 20px auto;
-  max-width: 600px;
+		max-width: 600px;
+
 		.square {
-			 width: 30%;
-      background: $viol;
-      padding-bottom: 30%;
-      float: left;
-      margin: 1.66%;
-      transition: background 0.6s;
-      -webkit-transition: background 0.6s;
-      -moz-transition: background 0.6s;
-      cursor: pointer;
+			@include divsize(30%, auto, 1.66%, 0);
+			background: $viol;
+			padding-bottom: 30%;
+			float: left;
+			transition: background 0.6s;
+			-webkit-transition: background 0.6s;
+			-moz-transition: background 0.6s;
+			cursor: pointer;
+
 			:hover {
-				 border-radius: 15%;
+				border-radius: 15%;
 			}
 		}
 	}
 }
 
-@media only screen and (min-width:768px){
+@media only screen and (min-width:768px) {
 	body {
-		h1{
+		h1 {
 			span {
 				#mainHeading {
-					 font-size: 35px
+					font-size: 35px
 				}
+
 				#colorDisplay {
 					font-size: 25px;
 				}
 			}
 		}
+
 		#stripe {
 			button {
 				font-size: 18px;
@@ -130,13 +156,14 @@ body {
 	}
 }
 
-@media only screen and (min-width:992px){
+@media only screen and (min-width:992px) {
 	body {
 		h1 {
 			span {
 				#mainHeading {
 					font-size: 45px;
 				}
+
 				#colorDisplay {
 					font-size: 30px;
 				}
