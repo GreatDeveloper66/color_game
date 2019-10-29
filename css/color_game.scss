@@ -4,11 +4,13 @@ $family: "Roboto";
 $wht: rgba(255, 255, 255, 1);
 $stlblue: rgba(10, 130, 180, 1);
 $blackpearl: rgba(14, 27, 38, 1);
-$midgrey: rgba(101, 109, 116, 1);
+$midgrey: rgba(101, 109, 116, 0.75);
 $viol: rgba(238, 130, 238, 1);
 $blueviolet: rgba(138, 43, 226, 1);
 $antiquewhite: rgba(250, 235, 215, 1);
 $lightgrey: rgba(195,195,195,1);
+$titlecolor: rgba(240,20,20,1);
+$indianred: RGB(205, 92, 92, 0.8);
 
 .divalignment {
 	display: flex;
@@ -43,20 +45,21 @@ body {
 			font-size: 30px;
 			color: $blueviolet;
 			background: transparent;
-			
+
 		}
 	}
 	.gamelevel {
 		@extend .columnalignment;
 		@include divsize(515px,auto,auto,2);
-		border: 2px solid $blueviolet;
-		box-shadow: 2px 2px $midgrey;
+		border: 1px solid $blackpearl;
+		box-shadow: 4px 4px $midgrey;
 		background-color: $lightgrey;
 	}
 	.modebox {
 		@extend .columnalignment;
-		border: 2px solid $blueviolet;
+		border: 1px solid $blackpearl;
 		background-color: $lightgrey;
+  box-shadow: 4px 4px $midgrey;
 	}
 	#stripe {
 		@extend .divalignment;
@@ -85,12 +88,10 @@ body {
 			background-color: $stlblue;
 		}
 
-		span {
-			#message {
-				display: inline-block;
+   span#message {
+     display: inline-block;
 				width: 20%;
-			}
-		}
+   }
 	}
 
 	h1 {
@@ -102,16 +103,16 @@ body {
 		background: $stlblue;
 		text-transform: uppercase;
 
-		span {
-			#mainHeading {
+		span#mainHeading {
 				font-size: 35px;
+				color: $indianred;
 			}
 
 			#colorDisplay {
 				font-size: 18px;
 			}
 		}
-	}
+
 
 	#container {
 		margin: 20px auto;
@@ -133,6 +134,7 @@ body {
 		}
 	}
 }
+
 
 @media only screen and (min-width:768px) {
 	body {
