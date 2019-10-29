@@ -18,6 +18,12 @@ $indianred: RGB(205, 92, 92, 0.8);
 	align-items: center;
 }
 
+.divalignleft {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
 .columnalignment {
 	display: flex;
 	flex-direction: column;
@@ -54,6 +60,9 @@ body {
 		border: 1px solid $blackpearl;
 		box-shadow: 4px 4px $midgrey;
 		background-color: $lightgrey;
+		#stripe {
+			margin-right: 60px;
+		}
 	}
 	.modebox {
 		@extend .columnalignment;
@@ -63,7 +72,7 @@ body {
 	}
 	#stripe {
 		@extend .divalignment;
-		background-color: $wht;
+		background-color: $lightgrey;
 
 		button {
 			border: solid $blackpearl 1px;

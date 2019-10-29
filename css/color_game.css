@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+.divalignleft {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .columnalignment, body .gamelevel, body .modebox {
   display: flex;
   flex-direction: column;
@@ -41,6 +47,10 @@ body .gamelevel {
   background-color: #c3c3c3;
 }
 
+body .gamelevel #stripe {
+  margin-right: 60px;
+}
+
 body .modebox {
   border: 1px solid #0e1b26;
   background-color: #c3c3c3;
@@ -48,7 +58,7 @@ body .modebox {
 }
 
 body #stripe {
-  background-color: white;
+  background-color: #c3c3c3;
 }
 
 body #stripe button {
@@ -94,7 +104,7 @@ body h1 {
 
 body h1 span#mainHeading {
   font-size: 35px;
-  color: RGB(205, 92, 92, 0.9);
+  color: RGB(205, 92, 92, 0.8);
 }
 
 body h1 #colorDisplay {
