@@ -15,12 +15,10 @@
   "author": "Adam Shaffer",
   "license": "MIT",
   "devDependencies": {
-    "jquery": "^3.6.4",
     "sass": "^1.22.10"
   },
   "dependencies": {
     "express": "^4.18.2",
-    "jsdom": "^22.0.0",
     "nodemon": "^2.0.22"
   }
 }
